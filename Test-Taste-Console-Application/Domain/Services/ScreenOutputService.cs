@@ -145,6 +145,9 @@ namespace Test_Taste_Console_Application.Domain.Services
 
         public void OutputAllPlanetsAndTheirAverageMoonGravityToConsole()
         {
+            //Purv Gohel :  Added Loading message
+            Console.WriteLine(OutputString.LoadingAllPlanetsData);
+
             //The function works the same way as the PrintAllPlanetsAndTheirMoonsToConsole function. You can find more comments there.
             var planets = _planetService.GetAllPlanets().ToArray();
             if (!planets.Any())
@@ -152,6 +155,9 @@ namespace Test_Taste_Console_Application.Domain.Services
                 Console.WriteLine(OutputString.NoMoonsFound);
                 return;
             }
+
+            //Purv Gohel :  Added message for writing all planets and their average moon gravity data
+            Console.WriteLine(OutputString.WritingAllPlanetsAndTheirAverageMoonGravityData);
 
             var columnSizes = new[] { 20, 30 };
             var columnLabels = new[]

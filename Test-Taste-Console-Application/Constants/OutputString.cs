@@ -15,5 +15,10 @@
         public const string NoPlanetsFound = "No planets found.";
         public const string FileCreated = "The file is created in: ";
         public const string FolderCreated = "The folder is created in: ";
+
+        //Purv Gohel :  Added Loading and writing messages
+        public const string LoadingAllPlanetsData = "Loading All Planets data....";
+        public const string WritingAllPlanetsAndTheirAverageMoonGravityData = "Writing All Planets and their Average Moon Gravity data....";
+
     }
 }

@@ -10,10 +10,13 @@ namespace Test_Taste_Console_Application.Domain.Objects
         public string Id { get; set; }
         public float SemiMajorAxis { get; set; }
         public ICollection<Moon> Moons { get; set; }
-        public float AverageMoonGravity
-        {
-            get => 0.0f;
-        }
+
+        // Purv Gohel :  Added getter and setter of Average Moon Gravity in place of only getter
+        public float AverageMoonGravity { get; set; }
+        //public float AverageMoonGravity
+        //{
+        //    get => 0.0f;
+        //}
 
         public Planet(PlanetDto planetDto)
         {
@@ -27,6 +30,9 @@ namespace Test_Taste_Console_Application.Domain.Objects
                     Moons.Add(new Moon(moonDto));
                 }
             }
+
+            //Purv Gohel : Set the value of Average Moon Gravity based on Gravity 
+            AverageMoonGravity = planetDto.Gravity;
         }
 
         public Boolean HasMoons()
